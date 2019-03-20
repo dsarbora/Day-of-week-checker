@@ -1,7 +1,8 @@
-export function checkWeekDay(date){
+export function checkWeekday(date){
     let comparisonDate = new Date("3/24/2019");
-    let differenceInDays = (parseInt(((date-date2)%7).toFixed(0))+7)%7;
-    const days =["Sunday", "Saturday", "Friday", "Thursday", "Wednesday", "Tueday", "Monday"];
+    let differenceInDays = (parseFloat((((comparisonDate-date)/86400000)%7).toFixed(0))+7)%7;
+    const days =["Sunday", "Saturday", "Friday", "Thursday", "Wednesday", "Tuesday", "Monday"];
+    return days[differenceInDays];
 }
 
 export function isValidDate(date){
