@@ -3,7 +3,7 @@ import { isValidDate, checkWeekday } from '../src/weekday.js';
 describe('Weekday', function(){
 
     console.log("test");
-    it('tests if date is valid: passing invalid valid', function(){
+    it('tests if date is valid: passing invalid date', function(){
         let date = new Date("string");
         expect(isValidDate(date)).toEqual(false);
     });
