@@ -7,15 +7,18 @@ $(document).ready(function(){
     $("#myForm").submit(function(){
         event.preventDefault();
         let input = $("#checkDate").val();
-        let output;
+        let output = `${input} is `;
+        console.log(input);
+        console.log(output);
         if(isValidDate(input))
         {
-            output = checkWeekday(new Date(input));
+            output += checkWeekday(new Date(input));
         }
         else
         {
-            output = 'Invalid Date';
+            output += 'Invalid Date';
         }
+        console.log(output);
         $("#result").text(output);
     })
 })
